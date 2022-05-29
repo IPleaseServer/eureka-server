@@ -1,0 +1,12 @@
+server:
+  port: ${EUREKA_SERVER_PORT}
+  address: ${EUREKA_SERVER_IP}
+  shutdown: graceful
+eureka:
+  instance:
+    hostname: ${EUREKA_HOSTNAME}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
