@@ -3,3 +3,5 @@ spring:
     active: prod
 logging:
   config: classpath:logback/logback-${spring.profiles.active}.xml
+server:
+  shutdown: graceful
