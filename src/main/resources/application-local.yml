@@ -9,3 +9,8 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://${server.address}:${server.port}/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: busrefresh
